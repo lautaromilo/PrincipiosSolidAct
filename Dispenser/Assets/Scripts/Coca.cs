@@ -2,23 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Coca : Liquidos
+public class Coca : ClaseLiquido, ILiquidos
 {
-    public void Liberar()
-    { 
-        
-    }
-
-    void Start()
+    public override void Liberar(GameObject coca, Transform posicion)
     {
-        
+        Debug.Log("Liberar Coca");
     }
 
-    void Update()
+    public override void Desaparecer()
     {
-        
+        Debug.Log("Chau Coca");
     }
 
+ 
 
 
 }
