@@ -2,20 +2,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Sprite : Liquidos
+public class Sprite : ClaseLiquido, ILiquidos
 {
-    public void Liberar()
+    public override void Liberar(GameObject sprite, Transform posicion)
     {
+        Debug.Log("Liberar Sprite");
+
+        GameObject instancia = Instantiate(sprite, posicion.position, posicion.rotation);
 
     }
 
-    void Start()
+    public override void Desaparecer()
     {
-        
-    }
+        //Destroy(this);
 
-    void Update()
-    {
-        
+        Debug.Log("Chau Sprite");
     }
+    
+
+   
 }
