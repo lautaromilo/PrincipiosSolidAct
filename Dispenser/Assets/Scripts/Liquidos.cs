@@ -2,22 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Liquidos : MonoBehaviour
+public interface ILiquidos
 {
-    public interface ILiquido
-    {
-        public void Liberar();
-    }
-    
-    
-    
-    void Start()
-    {
-        
-    }
+    public void Liberar(GameObject bebidas, Transform posicion);
 
-    void Update()
-    {
-        
-    }
+    public void Desaparecer();
+
+
 }
