@@ -2,23 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Agua: Liquidos
-
+public class Agua : ClaseLiquido, ILiquidos
 {
-    public void Liberar()
+    public override void Liberar(GameObject agua, Transform posicion)
     {
-
+        Debug.Log("Liberar Agua");
     }
 
-
-
-    void Start()
+    public override void Desaparecer()
     {
-        
+        Debug.Log("Chau Agua");
     }
 
-    void Update()
-    {
-        
-    }
+    
 }
