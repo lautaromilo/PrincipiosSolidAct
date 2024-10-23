@@ -2,22 +2,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Fanta : Liquidos
+public class Fanta : ClaseLiquido, ILiquidos
 {
-    public void Liberar()
+    public override void Liberar(GameObject fanta, Transform posicion)
     {
-
+        Debug.Log("Liberar Fanta");
     }
-    
-    
-    
-    // Start is called before the first frame update
+
+    public override void Desaparecer()
+    {
+        Debug.Log("Chau Fanta");
+    }
+
     void Start()
     {
         
     }
 
-    // Update is called once per frame
     void Update()
     {
         
