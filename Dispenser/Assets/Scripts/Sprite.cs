@@ -23,11 +23,6 @@ public class Sprite : ClaseLiquido, ILiquidos
             }
         }
 
-
-
     }
-
-
-
    
 }

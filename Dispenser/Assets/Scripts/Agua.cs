@@ -13,7 +13,6 @@ public class Agua : ClaseLiquido, ILiquidos
             if (!gameObject.activeInHierarchy)
             {
                 Reactivar(posicion);
-
             }
 
             else
@@ -24,5 +23,4 @@ public class Agua : ClaseLiquido, ILiquidos
         }
     }
 
-    
 }
