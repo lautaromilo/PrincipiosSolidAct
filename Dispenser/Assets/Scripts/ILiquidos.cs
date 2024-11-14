@@ -8,5 +8,4 @@ public interface ILiquidos
 
     public void Desaparecer();
 
-
 }
