@@ -16,7 +16,7 @@ LOS LIQUIDOS DEBERAN DESAPARECER AL CAER DESDE LA CANILLA.
 
 Patrón de Diseño elegido: “Factory Method”
 
-Se reutilizó el proyecto anterior para implementar el Patrón de Diseño elegido.
+Se reutilizó el proyecto anterior para implementar el Patrón de Diseño elegido. Se trabajó en una nueva Branch llamada "patron-de-diseno"
 
 Resumen: Se espera ver un dispenser que desde la "Canilla1" libere "Agua" y desde la "Canilla2" libere "Gaseosas".
 Funcionamiento:
