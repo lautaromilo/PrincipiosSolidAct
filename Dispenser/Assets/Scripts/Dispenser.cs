@@ -13,23 +13,24 @@ public class Dispenser : MonoBehaviour
     private GameObject soloagua;
     private GameObject gaseosas;
 
+    private IFactory factory;
 
     void Start()
     {
         soloagua = GameObject.Find("SoloAgua");
         gaseosas = GameObject.Find("Gaseosas");
 
+        factory = GetComponent<CreadorLiquidos>();
+
     }
-
-
 
     void Update()
     {
        
         if (Input.GetKeyDown(KeyCode.D))
         {
-            Coca newcoca = coca.GetComponent<Coca>();
-
+            ILiquidos newcoca = factory.CrearLiquido("Coca");
+            
             if (newcoca != null)
             {
                 Debug.Log("Entro a liberar Coca");
@@ -40,8 +41,8 @@ public class Dispenser : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.A))
         {
-            Agua newagua = agua.GetComponent<Agua>();
-
+            ILiquidos newagua = factory.CrearLiquido("Agua");
+            
             if (newagua != null)
             {
                 Debug.Log("Entro a liberar Agua");
@@ -52,11 +53,9 @@ public class Dispenser : MonoBehaviour
 
         }
 
-
         if (Input.GetKeyDown(KeyCode.S))
         {
-            Sprite newsprite = sprite.GetComponent<Sprite>();
-          
+            ILiquidos newsprite = factory.CrearLiquido("Sprite");          
 
             if (newsprite != null)
             {
@@ -69,8 +68,8 @@ public class Dispenser : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.F))
         {
-            Fanta newfanta = fanta.GetComponent<Fanta>();
-
+            ILiquidos newfanta = factory.CrearLiquido("Fanta");
+            
             if (newfanta != null)
             {
                 Debug.Log("Entro a liberar fanta");
