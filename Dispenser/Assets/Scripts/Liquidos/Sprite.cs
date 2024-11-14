@@ -2,13 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Agua : ClaseLiquido, ILiquidos
+public class Sprite : ClaseLiquido, ILiquidos
 {
-    public override void Liberar(GameObject agua, Transform posicion)
+    public override void Liberar(GameObject sprite, Transform posicion)
     {
-        Debug.Log("Liberar Agua");
-        
-        if (agua != null && posicion != null)
+        Debug.Log("Liberar Sprite");
+
+        if (sprite != null && posicion != null)
         {
             if (!gameObject.activeInHierarchy)
             {
@@ -18,11 +18,11 @@ public class Agua : ClaseLiquido, ILiquidos
 
             else
             {
-                GameObject instancia = Instantiate(agua, posicion.position, posicion.rotation);
+                GameObject instancia = Instantiate(sprite, posicion.position, posicion.rotation);
                 instancia.transform.position = new Vector3(posicion.position.x, posicion.position.y - 0.5f, posicion.position.z);
             }
         }
-    }
 
-    
+    }
+   
 }

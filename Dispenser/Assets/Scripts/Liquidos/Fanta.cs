@@ -13,7 +13,6 @@ public class Fanta : ClaseLiquido, ILiquidos
             if (!gameObject.activeInHierarchy)
             {
                 Reactivar(posicion);
-
             }
 
             else
@@ -23,10 +22,6 @@ public class Fanta : ClaseLiquido, ILiquidos
             }
         }
 
-
     }
-
-
-
 
 }
